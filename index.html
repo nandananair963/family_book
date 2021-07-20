@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+    <body>
+        <h1>My Family Book</h1>
+        <hr>
+        <h4 id="family_member">Grandfather</h4>
+        <img id="member_img" src="g.father.png">
+        <br>
+        <button onclick="update();">Next</button>
+    </body>
+
+    <script>
+       var names =  ["Grandfather","Grandmother","Father","Mother","Me","Brother"];
+       
+       var img =  ["g.father.png","g.mother.png","father.png","mom.png","me.png","bro.png"];
+
+       var i= 0;
+       function update(){
+           i++;
+           var number_of_family_member= 5
+           if(i > number_of_family_member)
+           {
+               i=0
+           }
+           var updated_img = img[i]
+           var updated_name = names[i]
+           document.getElementById("member_img").src=updated_img
+           document.getElementById("family_member").innerHTML=updated_name
+       }
+
+    </script>
+</html>
